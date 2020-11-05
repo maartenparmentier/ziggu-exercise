@@ -17,12 +17,12 @@
 I created a basic rails app with `rails new vue-pagination-exercise -d=postgresql --api`
 
 I added the following gems:
-- `annotate` to get models schemas
+- `annotate` to get model schemas
 - `faker` to easily create dummy data
 - `kaminari` for pagination. It's what I am used to, there's no other reason why I used this gem.
-- `active_model_serializers` for api responses. It's what I use for over 5 years. I like sending the pagination data inside `meta`
+- `active_model_serializers` for api responses. It's what I have used for over 5 years. I like sending the pagination data inside `meta`
 
-I uncommented and installed the default `rack-cors` gem, in order to fix be able to load data in the frontend without having CORS issues. For this example I only allowed the default urls Vue gives us.
+I uncommented and installed the default `rack-cors` gem, in order to be able to load data in the frontend without having CORS issues. For this example I only allowed the default urls Vue gives us.
 
 ## Frontend
 
@@ -31,11 +31,11 @@ I used `@vue/cli` to generate a default Vue 3 app.
 # First Vue exploration
 
 #### Study notes
-While reading the guides and writing code I made some small nodes to help me out later on.
-You can find my notes [here](https://www.notion.so/Study-Notes-827be348dfba422bac7e7214674c0578)
+While reading the guides and writing code I made some small notes to help me out later on.
+In case you're interested, you can find my notes [here](https://www.notion.so/Study-Notes-827be348dfba422bac7e7214674c0578)
 
 #### Process
-I read the `Essentials` and `Components In-Depth` chapters in the Vue guides as well as the `Style Guide`. I skipped the rest for this small exercise to see how far I would come. I'm sure the solution can be optimised by reading further in the documentation and browsing through Vue's API.
+I read the `Essentials` and `Components In-Depth` chapters in the [Vue 3 guides](https://v3.vuejs.org/guide/installation.html#release-notes) as well as the `Style Guide`. I skipped the rest for this small exercise to see how far I would come. I'm sure the solution can be optimised by reading further in the documentation and browsing through Vue's API.
 
 All the topics I read in the Style Guide made a lot of sense and they gave me a clean and good feeling.
 I think I already use most of the rules in my daily (Ember) work. 👍
@@ -64,5 +64,5 @@ While I was building the app I made the following decisions:
 I used Bulma's table pagination design, but I had some issues getting the page to look like I wanted. In the end I settled for what it is right now. I did not pay attention to responsive design.
 - In a real and bigger app I guess you'd use Vuex or something related. I did not use that because I didn't think it was worth it for this small app.
 - As commented in the Rails API, because this was a very simple app and the focus was more on the Vue component, I just wrote all the filtering inside the `#index` and I expected all the params to be present.
-- I built the component in the same way (perPage & page params) as the pagination component I use at my current job. I added the extra `perPage` option to make it a bit more dynamic.
-- I saw this exercise not only as an interview task, but also as a learning opportunity and experience. So I extended the app a bit in order to practise some more. I added a `SortableTableHeader` component as well.
+- I built the component in the same way (currentPage & totalPage params) as the pagination component I use at my current job. I added the extra `perPage` option to make it a bit more dynamic.
+- I saw this exercise not only as an interview task, but also as a learning opportunity and experience. I added a `SortableTableHeader` component as well, in order to play a bit more with bindings, methods, components,...
