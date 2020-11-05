@@ -2,6 +2,8 @@
 
 ## Backend
 
+(This project uses Ruby v2.6.6)
+
 1. `bin/setup`
 2. `rails s`
 
