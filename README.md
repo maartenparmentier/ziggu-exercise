@@ -66,7 +66,7 @@ I did have some issues with the livereload/rebuild of the frontend server. I had
 While I was building the app I made the following decisions:
 - I would not focus too much on UI, since I understood that was not the goal. Because of that I did not implement ways to dynamically style the component.
 I used Bulma's table pagination design, but I had some issues getting the page to look like I wanted. In the end I settled for what it is right now. I did not pay attention to responsive design.
-- In a real and bigger app I guess you'd use Vuex or something related. I did not use that because I didn't think it was worth it for this small app.
+- In a real and bigger app I guess you'd use Vuex or something related. I did not use that because I didn't think it wasn't worth it for this small app.
 - As commented in the Rails API, because this was a very simple app and the focus was more on the Vue component, I just wrote all the filtering inside the `#index` and I expected all the params to be present.
 - I built the component in the same way (currentPage & totalPage params) as the pagination component I use at my current job. I added the extra `perPage` option to make it a bit more dynamic.
 - I saw this exercise not only as an interview task, but also as a learning opportunity and experience. I added a `SortableTableHeader` component as well, in order to play a bit more with bindings, methods, components,...
