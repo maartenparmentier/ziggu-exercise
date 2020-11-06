@@ -18,26 +18,26 @@
 
 <template>
   <div v-if="perPage" class="block select is-rounded">
-    <select :value="perPage" @change="$emit('set-per-page',$event.target.value)">
+    <select :value="perPage" @change="$emit('set-per-page',$event.target.value)" data-test-per-page>
       <option>10</option>
       <option>25</option>
       <option>50</option>
     </select>
   </div>
   <nav class="pagination is-centered is-rounded mb-4" role="navigation" aria-label="pagination">
-    <a @click="goToPage(currentPage - 1)" class="pagination-previous" :disabled="currentPage === 1 ? 'true' : null">
+    <a v-if="totalPages > 1" @click="goToPage(currentPage - 1)" class="pagination-previous" :disabled="currentPage === 1 ? 'true' : null" data-test-previous>
       <slot name="previous">
         Previous
       </slot>
     </a>
-    <a @click="goToPage(currentPage + 1)" class="pagination-next" :disabled="currentPage === totalPages ? 'true' : null">
+    <a v-if="totalPages > 1" @click="goToPage(currentPage + 1)" class="pagination-next" :disabled="currentPage === totalPages ? 'true' : null" data-test-next>
       <slot name="next">
-        Next page
+        Next
       </slot>
     </a>
     <ul class="pagination-list">
       <li v-for="n in pageRangeWithDots" :key="n">
-        <a @click="goToPage(n)" class="pagination-link" :class="{ 'is-current': isCurrentPage(n) }">{{n}}</a>
+        <a @click="goToPage(n)" class="pagination-link" :class="{ 'is-current': isCurrentPage(n) }" :data-test-page="n">{{n}}</a>
       </li>
     </ul>
   </nav>
