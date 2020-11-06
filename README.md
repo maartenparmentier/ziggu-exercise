@@ -54,7 +54,7 @@ Overall, I had a pretty good time writing this small app. It was fun to start wi
 
 The first thing I did was installing `@vue/cli`. I was used to the `ember-cli` so I already had some experiences with a framework specific cli tool. I must say that I was impressed by the `vue ui`. It's probably just a nice gimmick for seasoned developers but probably a very helpful tool for junior developers. I don't expect to use this very frequently? To test it out I used `vui ui` to install Bulma (not Buefy as I know you guys use, that would make this exercise too easy since they have a pagination component).
 
-I also installed the Vue Devtoos. Same story here, I was used to the `ember inspector` which was super helpful.
+I also installed the Vue Devtools. Same story here, I was used to the `ember inspector` which was super helpful.
 Visually it looks a lot better than the Ember inspector I'm used to. Functionally I'll have to build more Vue projects before I have an opinion I guess 😉.
 
 I did have some issues with the livereload/rebuild of the frontend server. I had to stop and restart the frontend process a few times in order for it to pick up my last changes. I'm not sure if this is a known issue, but it was very frustrating at times 😅.
