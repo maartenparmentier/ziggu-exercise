@@ -48,6 +48,8 @@ Because I fiddled a little bit with React a few years ago, I was able to underst
 
 Coming from Ember, the biggest mental shift was the removal of 2-way-bindings and the fact that there are less conventions. I'm not sure if I wrote my components according to best practises of the community or Ziggu's internal rules.
 
+Writing tests was quite nice as well. Since I used QUnit for Ember, I had to get used a bit to what was coming from Jest and what was coming from `vue-test-utils`.
+
 Overall, I had a pretty good time writing this small app. It was fun to start with zero Vue knowledge and ending up with a small working app in a matter of hours.
 
 #### Building the app
